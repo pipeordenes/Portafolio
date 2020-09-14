@@ -20,7 +20,7 @@
                   <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
                 </fieldset>
               </form>
-              <p class="m-b-0 m-t">Olvidaste tu contraseña? <a href="recuperarcontraseña.html">Haga click aqui</a>.</p>
-              <p class="m-b-0 m-t">¿Deseas registrarte? <a href="registro.html">Haga click aqui</a>.</p>
+              <p class="m-b-0 m-t">Olvidaste tu contraseña? <a href="{% url 'recuperarcontraseña' %}">Haga click aqui</a>.</p>
+              <p class="m-b-0 m-t">¿Deseas registrarte? <a href="{% url 'registro' %}">Haga click aqui</a>.</p>
             </div>
 {% endblock %}

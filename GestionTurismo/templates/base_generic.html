@@ -32,11 +32,13 @@
                   </h1>
               </a>
             </div>
+            {% block sidebar %}
             <div class="col-md-4">
               <ul class="list-inline user-menu pull-right">
                 <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="{% url 'login' %}" class="text-uppercase">Login</a></li>
               </ul>
             </div>
+            {% endblock %}
           </div>
         </div>
       </div>
@@ -83,7 +85,7 @@
         </div>
         <div class="col-md-5">
           <ul class="list-inline pull-right">
-            <li><a href="#">Redes Sociales</a></li>
+            <li><a href="{% url 'index' %}">Redes Sociales</a></li>
           </ul>
         </div>
       </div>
