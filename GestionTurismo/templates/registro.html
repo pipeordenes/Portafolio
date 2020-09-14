@@ -2,19 +2,6 @@
 {% load static %}
 
 {% block content %}
-<body class="fullscreen-centered page-register">
-  <div id="background-wrapper" class="benches" data-stellar-background-ratio="0.8">
-    <div id="content">
-      <div class="header">
-        <div class="header-inner">
-          <a class="navbar-brand center-block" href="index.html" title="Home">
-            <h1 class="hidden">
-                <img src="img/logo.png" alt="Flexor Logo">
-                Flexor
-              </h1>
-          </a>
-        </div>
-      </div>
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <div class="panel panel-default">
@@ -77,11 +64,9 @@
                   <input class="btn btn-lg btn-primary btn-block" type="submit" value="Registrar">
                 </fieldset>
               </form>
-              <p class="m-b-0 m-t">¿Ya estas registrado? <a href="login.html">Haga Click Aqui</a>.</p>
+              <p class="m-b-0 m-t">¿Ya estas registrado? <a href="{% url 'login' %}">Haga Click Aqui</a>.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
   {% endblock %}
