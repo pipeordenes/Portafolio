@@ -25,7 +25,7 @@
         <div class="header-inner container">
           <div class="row">
             <div class="col-md-8">
-              <a class="navbar-brand" href="index.html" title="Home">
+              <a class="navbar-brand" href="{% url 'index' %}" title="Home">
                 <h1 class="hidden">
                     <img src="{% static 'img/logo.PNG' %}" alt="Logo Turismo Real">
                     Turismo Real
@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-4">
               <ul class="list-inline user-menu pull-right">
-                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="login.html" class="text-uppercase">Login</a></li>
+                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="{% url 'login' %}" class="text-uppercase">Login</a></li>
               </ul>
             </div>
           </div>
