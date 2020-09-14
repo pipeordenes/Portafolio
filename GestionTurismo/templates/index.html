@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+  <div id="content">
+    <div class="showcase block block-border-bottom-grey">
+      <div class="container">
+        <h2 class="block-title">
+            Departamentos 
+          </h2>
+        <p>Estos son los departamentos que tiene todo cliente a poder acceder a ello con su respectivo precio
+           , por lo que, aqui podra acceder a todos los datos e informacion de ello.
+        </p>
+        <div class="item-carousel" data-toggle="owlcarousel" data-owlcarousel-settings='{"items":4, "pagination":false, "navigation":true, "itemsScaleUp":true}'>
+          <div class="item">
+            <a href="#" class="overlay-wrapper">
+                <img src="{% static 'img/deparmen5.jpg' %}" alt="Villaricon" class="img-responsive underlay">
+                <span class="overlay">
+                  <span class="overlay-content"> <span class="h4">Downloading</span> </span>
+                </span>
+              </a>
+            <div class="item-details bg-noise">
+              <h4 class="item-title">
+                  <a href="#">Villarricon</a>
+                </h4>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#" class="overlay-wrapper">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="Project 2 image" class="img-responsive underlay">
+                <span class="overlay">
+                  <span class="overlay-content"> <span class="h4">Project 2</span> </span>
+                </span>
+              </a>
+            <div class="item-details bg-noise">
+              <h4 class="item-title">
+                  <a href="#">Valparaison</a>
+                </h4>
+            </div>
+          </div>
+          <div class="item">
+            <a href="#" class="overlay-wrapper">
+                <img src="{% static 'img/deparment3.jpg' %}" alt="Project 3 image" class="img-responsive underlay">
+                <span class="overlay">
+                  <span class="overlay-content"> <span class="h4">Project 3</span> </span>
+                </span>
+              </a>
+            <div class="item-details bg-noise">
+              <h4 class="item-title">
+                  <a href="#">Puerto Varati</a>
+                </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
