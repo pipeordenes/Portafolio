@@ -6,3 +6,16 @@ GestionTurismo/__pycache__/urls.cpython-37.pyc
 GestionTurismo/__pycache__/views.cpython-37.pyc
 GestionTurismo/__pycache__/urls.cpython-37.pyc
 GestionTurismo/__pycache__/views.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0013_turismo.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0012_servicioextra.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0011_delete_servicioextra.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0010_auto_20200914_1845.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0009_auto_20200914_1843.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0008_auto_20200914_1839.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0006_auto_20200914_1354.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0007_reserva_estado.cpython-37.pyc
+GestionTurismo/migrations/__pycache__/0005_clientes_edad.cpython-37.pyc
+GestionTurismo/__pycache__/views.cpython-37.pyc
+GestionTurismo/__pycache__/urls.cpython-37.pyc
+GestionTurismo/__pycache__/models.cpython-37.pyc
+db.sqlite3
