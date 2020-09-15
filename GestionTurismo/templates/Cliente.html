@@ -4,7 +4,6 @@
 {% block content %}
 
 <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
-<link href="{% static 'css/Nav.css' %}" rel="stylesheet">
 
     <!--aca se crea el munu a arriba-->
     <!-- FONT AWESOME-->
@@ -19,7 +18,7 @@
     <nav class="nav-main">
         <ul class="botones">
             <li> 
-                <a href="#"> <strong>Perfil </strong> </a>
+                <a  href="{% url 'perfil' %}"> <strong>Perfil </strong> </a>
 
             </li>
             <li>
