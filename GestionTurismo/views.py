@@ -13,3 +13,6 @@ def recuperarcontraseña(request):
 
 def registro(request):
     return render(request, 'registro.html', {})
+
+def cliente(request):
+    return render(request, 'cliente.html', {})
