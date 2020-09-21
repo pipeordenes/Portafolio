@@ -1,0 +1,58 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+<link href="{% static 'css/servicios.css' %}" rel="stylesheet">
+<script>src="{% static 'js/script.js' %}"</script>
+<script>src="{% static 'js/jquery-3.2.1.js' %}"</script>
+
+<div class="wrap">
+    <h1>Servicios</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" class="category_item" category="all">Todo</a>
+            <a href="#" class="category_item" category="Disponibles">Disponibles</a>
+            <a href="#" class="category_item" category="Ocupados">Ocupados</a>
+            <a href="#" class="category_item" category="Servicios extras">Servicios extras</a>
+            <a href="#" class="category_item" category="Tours">Tours</a>
+            <a href="#" class="category_item" category="Transporte">Transporte</a>
+        </div>
+        <section class="products-list">
+            <div class="product-item" category="Disponibles">
+                <img src="{% static 'img/deparment1.jpg' %}" alt="" >
+                <a href="#">Vitacura</a>
+            </div>
+            <div class="product-item" category="Disponibles">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Las condes</a>
+            </div>
+            <div class="product-item" category="Ocupados">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Providencia</a>
+            </div>
+            <div class="product-item" category="Ocupados">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Lo prado</a>
+            </div>
+            <div class="product-item" category="Disponibles">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Las condes</a>
+            </div>
+            <div class="product-item" category="Disponibles">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Las condes</a>
+            </div>
+            <div class="product-item" category="Ocupados">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Renca</a>
+            </div>
+            <div class="product-item" category="Disponibles">
+                <img src="{% static 'img/deparment2.jpg' %}" alt="" >
+                <a href="#">Estacion central</a>
+            </div>
+
+        </section>
+    </div>
+</div>
+{% endblock %}

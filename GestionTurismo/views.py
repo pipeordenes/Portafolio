@@ -19,3 +19,6 @@ def cliente(request):
 
 def perfil(request):
     return render(request, 'perfil.html', {})
+
+def servicios(request):
+    return render (request, 'servicios.html')

@@ -53,9 +53,6 @@ ul{
  
 }
 
-.nav-brand{
-    width: 55px;
-}
 .botones ul li a {
 
     padding: 8px;
@@ -69,6 +66,8 @@ ul{
 
     display: flex;
 }
+
+
 .nav-main ul{
 
     display: flex;
@@ -105,3 +104,8 @@ ul{
    font-size: 3rem;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}

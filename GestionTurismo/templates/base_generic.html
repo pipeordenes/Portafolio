@@ -12,10 +12,44 @@
   <link href="{% static 'lib/owlcarousel/owl.transitions.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
   <link href="{% static 'img/logo.PNG' %}" rel="icon"> 
-
+  <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
+  <script>src="{% static 'js/script.js' %}"</script>
+  <script>src="{% static 'js/jquery-3.2.1.js' %}"</script>
 
 
 </head>
+
+
+    
+<br>
+<div class="Container">
+    <nav class="nav-main">
+        <ul class="botones">
+            <li> 
+                <a  href="{% url 'index' %}"> <strong>Inicio </strong> </a>
+
+            </li>
+            <li>
+                <a href="{% url 'servicios' %}"><strong> Servicios </strong></a>
+
+            </li>
+            <li>
+                <a href="#"><strong> Departamentos </strong></a>
+
+            </li>
+            <li>
+                <a href="#"><strong> Quienes somos</strong></a>
+
+            </li>
+            <li>
+                <a href="#"> <strong> Contacto  </strong></a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
 <body class="page-index has-hero">
   <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
     <div id="navigation" class="wrapper">
