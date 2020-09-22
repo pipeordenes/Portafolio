@@ -127,3 +127,31 @@
     background: white;
     text-align: center;
 }
+
+
+.informaciontur{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    background: #747474;
+    font-family: 'Poppins', sans-serif;
+}
+
+.informacion-turismo{
+    background: #3f3f3f;
+    padding: 5%;
+    margin: 4%;
+}
+
+.informacion-turismo h2{
+    color: #eb8110;
+}
+
+.informacion-turismo p{
+    color: white;
+}
