@@ -14,6 +14,7 @@
   <link href="{% static 'img/logo.PNG' %}" rel="icon"> 
   <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
   <link href="{% static 'css/Nav.css' %}" rel="stylesheet">
+  <link href="{% static 'css/perfil.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,7 +32,7 @@
         <div class="header-inner container">
           <div class="row">
             <div class="col-md-8">
-              <a class="navbar-brand" href="{% url 'index' %}" title="Home">
+              <a class="navbar-brand" href="{% url 'cliente' %}" title="inicio cliente">
                 <h1 class="hidden">
                     <img src="{% static 'img/logo.PNG' %}" alt="Logo Turismo Real">
                     Turismo Real
@@ -41,7 +42,7 @@
             {% block sidebar %}
             <div class="col-md-4">
               <ul class="list-inline user-menu pull-right">
-                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="{% url 'login' %}" class="text-uppercase">Login</a></li>
+                <li class="user-login"><i class="fa fa-sign-in text-primary"></i> <a href="{% url 'login' %}" class="text-uppercase">Cerrar Session</a></li>
               </ul>
             </div>
             {% endblock %}
@@ -81,21 +82,48 @@
   </div>
   <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
 <link href="{% static 'css/Nav.css' %}" rel="stylesheet">
-
-    <!--aca se crea el munu a arriba-->
-    <!-- FONT AWESOME-->
     <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
-   
-    <!--Letras Font Oswal-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
-
     <br>
+<div class="Container">
+    <nav class="nav-main">
+        <ul class="botones">
+            <li> 
+                <a  href="{% url 'perfil' %}"> <strong>Perfil </strong> </a>
+            </li>
+            <li>
+                <a href="#"><strong> Reservas </strong></a>
+            </li>
+            <li>
+                <a href="#"><strong> Consultar </strong></a>
+            </li>
+            <li>
+                <a href="#"><strong> Quienes somos </strong></a>
+            </li>
+            <li>
+                <a href="#"> <strong> Contacto  </strong></a>
+            </li>
+        </ul>
+    </nav>
   {% block content %}
     
     
   {% endblock %}
   <footer id="footer" class="block block-bg-grey-dark" data-block-bg-img="img/bg_footer-map.png" data-stellar-background-ratio="0.4">
     <div class="container">
+      <div class="row" id="contact">
+        <div class="col-md-3">
+          <address>
+              <strong>Turismo Real informacion</strong>
+              <br>
+              <i class="fa fa-map-pin fa-fw text-primary"></i> Los leones, Providencia
+              <br>
+              <i class="fa fa-phone fa-fw text-primary"></i> +569 4353 1445
+              <br>
+              <i class="fa fa-envelope-o fa-fw text-primary"></i> j.aguileral@alumnos.duoc.cl
+              <br>
+            </address>
+        </div>
       <br>
       <seccion class="social">
           <p>Redes sociales</p>
