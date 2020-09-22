@@ -16,3 +16,9 @@ def registro(request):
 
 def cliente(request):
     return render(request, 'cliente.html', {})
+
+def perfil(request):
+    return render(request, 'perfil.html', {})
+
+def servicios(request):
+    return render (request, 'servicios.html')
