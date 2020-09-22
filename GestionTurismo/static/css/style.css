@@ -1122,3 +1122,8 @@ a.btn-hh-trigger.target-open:after {
     text-align: center;
   }
 }
+
+.formulario{
+  padding:5%;
+  margin: 2%;
+}
