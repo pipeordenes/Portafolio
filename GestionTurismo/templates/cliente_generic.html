@@ -15,11 +15,55 @@
   <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
   <link href="{% static 'css/Nav.css' %}" rel="stylesheet">
   <link href="{% static 'css/perfil.css' %}" rel="stylesheet">
+  <link href="{% static 'css/reserva.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
+  <script type="text/javascript">
+    (function(document) {
+      'use strict';
+  
+      var LightTableFilter = (function(Arr) {
+  
+      var _input;
+  
+      function _onInputEvent(e) {
+        _input = e.target;
+        var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+        Arr.forEach.call(tables, function(table) {
+        Arr.forEach.call(table.tBodies, function(tbody) {
+          Arr.forEach.call(tbody.rows, _filter);
+        });
+        });
+      }
+  
+      function _filter(row) {
+        var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+        row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+      }
+  
+      return {
+        init: function() {
+        var inputs = document.getElementsByClassName('light-table-filter');
+        Arr.forEach.call(inputs, function(input) {
+          input.oninput = _onInputEvent;
+        });
+        }
+      };
+      })(Array.prototype);
+  
+      document.addEventListener('readystatechange', function() {
+      if (document.readyState === 'complete') {
+        LightTableFilter.init();
+      }
+      });
+  
+    })(document);
+    </script>
+      <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
+      <link href="{% static 'css/Nav.css' %}" rel="stylesheet">
+          <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
 </head>
 <body class="page-index has-hero">
   <div id="background-wrapper" class="buildings" data-stellar-background-ratio="0.1">
@@ -80,12 +124,7 @@
       </div>
     </div>
   </div>
-  <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
-<link href="{% static 'css/Nav.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
-    <br>
-<div class="Container">
+<div class="Containers">
     <nav class="nav-main">
         <ul class="botones">
             <li> 
@@ -95,16 +134,11 @@
                 <a href="#"><strong> Reservas </strong></a>
             </li>
             <li>
-                <a href="#"><strong> Consultar </strong></a>
-            </li>
-            <li>
-                <a href="#"><strong> Quienes somos </strong></a>
-            </li>
-            <li>
                 <a href="#"> <strong> Contacto  </strong></a>
             </li>
         </ul>
     </nav>
+</div>
   {% block content %}
     
     

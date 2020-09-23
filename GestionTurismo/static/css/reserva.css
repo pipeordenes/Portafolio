@@ -1,0 +1,60 @@
+.container a{
+    color:orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.listadoreserva h1, p{
+    color: rgb(255, 255, 255)5);
+    text-align: center;
+}
+
+.container td{
+color:rgb(3, 3, 3);
+background-color: white;
+padding: 5px;
+}
+
+.container td a{
+    background-color: rgb(238, 165, 6);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.container thead{
+    color:rgb(255, 255, 255);
+    background: #ff931f;
+    border: 2px solid rgb(253, 253, 253);
+    border-radius: 5px;
+}
+
+
+
+.listadoreserva{
+    margin:2%;
+    padding: 1%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+        padding: 2px;
+    }
+    .container thead tr th{
+        margin: 0;
+    }
+
+    .container thead tr th a{
+        margin: 2%;
+    }
+  }
+
+
+
+
+
+
+
+
