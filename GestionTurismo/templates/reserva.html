@@ -18,6 +18,53 @@
     }
 </script>
 
+<script languaje="javascript">
+    function verificarCasilla(form)
+    {
+        if (form.acepto.checked == false)
+        {
+        alert("Debes aceptar los términos del contrato antes de continuar");
+        form.acepto.focus(); return true;
+        }
+    form.submit()
+    }
+</script>
+
+<script language="javascript">
+    function agregarOpciones(form)
+    {
+    var selec = form.tipos.options;
+    var combo = form.estilo.options;
+    combo.length = null;
+    
+        if (selec[0].selected == true)
+        {
+        var seleccionar = new Option("<-- esperando selección","","","");
+        combo[0] = seleccionar;
+        }
+    
+        if (selec[1].selected == true)
+        {
+        var popular1 = new Option("Banco Estado","","","");
+        combo[0] = popular1;
+        }
+    
+        if (selec[2].selected == true)
+        {
+        var academica1 = new Option("Banco Estado","","");
+        var academica2 = new Option("Banco Falabella","","","");
+        var academica3 = new Option("Banco Ripley","","","");
+        var academica4 = new Option("Banco Santander","","","");
+        var academica5 = new Option("Banco Chile","","","");
+        combo[0] = academica1;
+        combo[1] = academica2;
+        combo[2] = academica3;
+        combo[3] = academica4;
+        combo[4] = academica5;
+        }
+    }
+    </script>
+
 
 <div class="reserva-arriendo">
     <div class="contenedor">
@@ -27,11 +74,11 @@
         </div> 
 
         <label for="nombre" class="form-label"> departamento </label>
-        <input type="radio" name="opdepartamento" value="natal" checked>Natalicio <br>
-        <input type="radio" name="opdepartamento" value="villarri">Villarricon<br>
-        <input type="radio" name="opdepartamento" value="licanray">Licanrayin<br>
-        <input type="radio" name="opdepartamento" value="viñaroso">Viñaroson<br>
-        <input type="radio" name="opdepartamento" value="santiasc">Santiasqui<br>
+        <input type="radio" name="opdepartamento" value="natal" checked> Natalicio <br>
+        <input type="radio" name="opdepartamento" value="villarri"> Villarricon<br>
+        <input type="radio" name="opdepartamento" value="licanray"> Licanrayin<br>
+        <input type="radio" name="opdepartamento" value="viñaroso"> Viñaroson<br>
+        <input type="radio" name="opdepartamento" value="santiasc"> Santiasqui<br>
         <br><br>
 
         <label for="nombre" class="form-label"> Servicios Extras</label>
@@ -55,12 +102,28 @@
 
         <hr>
 
+        <label for="nombre" class="form-label"> Fecha de Ingreso y Salida</label>
+        <br>
+        <p>Fecha de ingreso</p>
+        <input type="date" id="celular" class="form-input"  required>
+        <p>Fecha de salida</p>
+        <input type="date" id="celular" class="form-input"  required>
+
         <label for="nombre" class="form-label"> Selección Pago</label>
-        <input type="radio" name="opPago" value="Debi" checked>Debito
-        <input type="radio" name="opPago" value="Credi">Credito
+        <p>Recuerde que debe abonar el 50% para obtener la reserva.</p>
+        <select name="tipos" onChange="agregarOpciones(this.form)">
+        <option value="">[seleccione una opción]</option>
+        <option value="debito">Debito</option>
+        <option value="credito">Credito</option>
+        </select>
+        <select name="estilo">
+            <option value=""><-- esperando selección</option> 
+            </select>
         <br><br>
 
-        <input type="submit" class="form-submit" value="Reservar">
+        <input type="checkbox" name="acepto"> Acepto los términos del contrato de suscripción
+        <br><br>
+        <input type="submit" class="form-submit" value="Reservar" onClick="verificarCasilla(this.form)">
         <input type="reset" class="form-submit" value="Limpiar Formulario">
 
         </form>
