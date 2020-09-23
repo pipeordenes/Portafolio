@@ -1,5 +1,5 @@
 .Containers{
-background: rgb(24, 24, 24);
+background: rgb(31, 20, 20);
 padding: 2%;
 color: coral;
 }
@@ -54,8 +54,7 @@ color: coral;
 .menu2{
     background: #0000009f;
     padding: 7%;
-    margin: 6%;
-    border-radius: 10px solid black;
+    border-radius: 5px;
 }
 
 .menu2 li{
@@ -65,7 +64,7 @@ color: coral;
 }
 
 .menu2 h2{
-    color: #fdfdfd;
+    color: #ffffff;
     text-align: center;
 }
 

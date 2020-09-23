@@ -1,0 +1,69 @@
+{% extends "cliente_generic.html" %}
+{% load static %}
+
+{% block content %}
+<script languaje="javascript">
+    function habilita(form)
+    {
+    form.intereses[0].disabled = false;
+    form.intereses[1].disabled = false;
+    form.intereses[2].disabled = false;
+    }
+    
+    function deshabilita(form)
+    {
+    form.intereses[0].disabled = true;
+    form.intereses[1].disabled = true;
+    form.intereses[2].disabled = true;
+    }
+</script>
+
+
+<div class="reserva-arriendo">
+    <div class="contenedor">
+        <form action="" class="form">
+        <div class="form-header">
+            <h1 class="form-title">R<span>eserva</span></h1>
+        </div> 
+
+        <label for="nombre" class="form-label"> departamento </label>
+        <input type="radio" name="opdepartamento" value="natal" checked>Natalicio <br>
+        <input type="radio" name="opdepartamento" value="villarri">Villarricon<br>
+        <input type="radio" name="opdepartamento" value="licanray">Licanrayin<br>
+        <input type="radio" name="opdepartamento" value="viñaroso">Viñaroson<br>
+        <input type="radio" name="opdepartamento" value="santiasc">Santiasqui<br>
+        <br><br>
+
+        <label for="nombre" class="form-label"> Servicios Extras</label>
+            <p>¿Desea algun servicio extra?</p> <br>  
+            <input type="radio" name="boletin" value="si" checked onClick="habilita(this.form)"> SI, quiero suscribirme.
+            <input type="radio" name="boletin" value="no" onClick="deshabilita(this.form)"> No, gracias.
+            <br><br>
+            <p>Seleccione que desea :</p><br>
+            <input type="checkbox" name="intereses" value="Turismo"> Turismo<br>
+            <input type="checkbox" name="intereses" value="Transporte">Transporte<br>
+            <br><br>
+
+
+        <label for="nombre" class="form-label"> Dato Acompañante</label>
+        <input type="text" id="nombre" class="form-input" placeholder="Nombres" required>
+        <input type="text" id="apellido" class="form-input" placeholder="Apellidos" required>
+        <input type="text" id="nacionalidad" class="form-input" placeholder="Nacionalidad" required>
+        <input type="email" id="correo" class="form-input" placeholder="Correo Electronico" required>
+        <input type="text" id="celular" class="form-input" placeholder="Numero Celular" required>
+        <input type="text" id="edad" class="form-input" placeholder="Edad" required>
+
+        <hr>
+
+        <label for="nombre" class="form-label"> Selección Pago</label>
+        <input type="radio" name="opPago" value="Debi" checked>Debito
+        <input type="radio" name="opPago" value="Credi">Credito
+        <br><br>
+
+        <input type="submit" class="form-submit" value="Reservar">
+        <input type="reset" class="form-submit" value="Limpiar Formulario">
+
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -22,3 +22,6 @@ def perfil(request):
 
 def servicios(request):
     return render (request, 'servicios.html')
+
+def reserva(request):
+    return render (request, 'reserva.html')
