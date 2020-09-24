@@ -1,126 +1,45 @@
-{% extends "base_generic.html" %}
+{% extends "cliente_generic.html" %}
 {% load static %}
 
 {% block content %}
-
-<link href="{% static 'css/cliente.css' %}" rel="stylesheet">
-
-    <!--aca se crea el munu a arriba-->
-    <!-- FONT AWESOME-->
-    <link rel="stylesheet" href="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==">
-   
-    <!--Letras Font Oswal-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css" integrity="sha512-QAY8RpaU+5mx/feUcMx9GlZda/DWr2b7MFnFAPuLKSsVOnBOSGMHZDv4e1HbeLrjGFlhaFYIC29vKGCpOjQryw==" crossorigin="anonymous" />
-
+<div class="listadoreserva">
+<div class="container">
+    <h1>Listado de Reservas</h1>
+    <div style="height:50px"></div>
+    <p class="lead">
+    <p>Aqui podra encontrar a todas tus reservas hechas a lo largo del tiempo</p>
+    <hr>
+    <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscador..">
     <br>
-<div class="Container">
-
-    <nav class="nav-main">
-        <ul class="botones">
-            <li> 
-                <a  href="{% url 'perfil' %}"> <strong>Perfil </strong> </a>
-
-            </li>
-            <li>
-                <a href="#"><strong> Reservas </strong></a>
-
-            </li>
-            <li>
-                <a href="#"><strong> Consultar </strong></a>
-
-            </li>
-            <li>
-                <a href="#"><strong> Quienes somos </strong></a>
-
-            </li>
-            <li>
-                <a href="#"> <strong> Contacto  </strong></a>
-
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!--aca se termina el munu a arriba-->
-
-
-        <!--Seccion de noticias 1 -->
-        <hr>
-        <center><h2>¡Bienvenido!</h2></center>
-        <hr>        
-        <hr>
-        <center><h2>Departamentos disponibles</h2></center>
-        <hr>
-
-        <div class="new-cards">
-            
-            <div>
-
-                <img src="{% static 'img/deparment3.jpg' %}" alt="Arito 1" >
-                <h3> disponible</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, itaque?</p>
-                <a href="#"> Ver mas </a>
-            </div>
-
-            <div>
- 
-                <img src="{% static 'img/deparment2.jpg' %}" alt="Arito 1">
-                <h3> disponible</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, itaque?</p>
-                <a href="#"> Ver mas </a>
-
-            </div>
-
-            <div>
-               
-                <img src="{% static 'img/deparmen5.jpg' %}" alt="Arito 1" >
-                <h3> disponible</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, itaque?</p>
-                <a href="#"> Ver mas </a>
-
-            </div>
-
-            <div>
-              
-
-                <img src="{% static 'img/deparmen5.jpg' %}" alt="Arito 1" >
-                <h3> disponible</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, itaque?</p>
-                <a href="#"> Ver mas </a>
-
-            </div>
-
-
-
-
-        </div>
-
-
-            <br>
-                <!--Redes sociales-->   
-                <seccion class="social">
-
-                    <p>Redes sociales</p>
-                    <div class="links">
-        
-                        <a href="#">
-                            <i class="fab fa-facebook-f">  </i>
-                        </a>
-                        <a href="#">
-                            <i class="fab fa-whatsapp">  </i>
-                        </a>
-        
-                        <a href="#">
-                            <i class="fab fa-instagram">  </i>
-                        </a>
-        
-                        <a href="https://www.youtube.com/watch?v=cuK8v5t7_nA">
-                            <i class="fab fa-youtube">  </i>
-                        </a>
-                    </div>
-        
-                </seccion>
-                <br>
-
+    <br>
+    <table class="table table-bordered order-table ">
+      <thead>
+      <div class="nombrestr">
+        <tr>
+          <th>Codigo</th>
+          <th>Departamento</th>
+          <th>Fecha Ingreso</th>
+          <th>Fecha Salida</th>
+          <th>Cancelar</th>
+        </tr>
+      </thead>
+    </div>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <p>Si desea registrar una Reserva haga click en el siguiente link <a href="#">Haga click aqui para Reserva</a></p>
+    </div>
+</div>
 {% endblock %}

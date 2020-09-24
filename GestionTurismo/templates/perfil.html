@@ -1,80 +1,38 @@
-{% extends "base_generic.html" %}
+{% extends "cliente_generic.html" %}
 {% load static %}
 
 
 {% block content %}
-
-    <link href="{% static 'css/cliente.css' %}" rel="stylesheet">
-    
-    <br>
-    <div class="Container">
-    
-        <nav class="nav-main">
-            <ul class="botones">
-                <li> 
-                    <a  href="{% url 'cliente' %}"> <strong>Perfil </strong> </a>
-    
-                </li>
-                <li>
-                    <a href="#"><strong> Inicio </strong></a>
-    
-                </li>
-                <li>
-                    <a href="#"><strong> Quienes somos </strong></a>
-    
-                </li>
-                <li>
-                    <a href="#"><strong> Servicios </strong></a>
-    
-                </li>
-                <li>
-                    <a href="#"> <strong> Ayuda  </strong></a>
-    
-                </li>
-    
-            </ul>
-    
-        </nav>
-
-
 <center> 
-    <br>
-     <br>
-    <h2>Felipe</h2>
-    <img src="{% static 'img/perfil.jpg' %}" alt="" width="300">
-
-<hr>
-
-
+<div class="menu2">
  <ul class="menu2">
      <h2><strong> Datos personales </strong></h2>
      <br>
     <li >
         <h3>Correo</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">f.ordenesg@alumnos.duoc.cl</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">f.ordenesg@alumnos.duoc.cl</a></p>
     </li>
     <li>
         <h3>Apellido</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">Ordenes</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">Ordenes</a></p>
     </li>
     <li>
         <h3>Edad</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">22 años</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">22 años</a></p>
     </li>
     <li>
         <h3>Nacionalidad</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">Chileno</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">Chileno</a></p>
     </li>
     <li>
         <h3>Rut</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">20.984.345-9</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">20.984.345-9</a></p>
     </li>
 
     <li>
         <h3>Telefono</h3>
-        <a href="Correo: f.ordenesg@alumnos.duoc.cl">+56923183726</a>
+        <p><a href="Correo: f.ordenesg@alumnos.duoc.cl">+56923183726</a></p>
     </li>
+</div>
 </center>
-<hr>
-<br>
 {% endblock %}
