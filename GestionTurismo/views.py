@@ -25,3 +25,6 @@ def servicios(request):
 
 def reserva(request):
     return render (request, 'reserva.html')
+
+def contacto(request):
+    return render (request, 'contacto.html')

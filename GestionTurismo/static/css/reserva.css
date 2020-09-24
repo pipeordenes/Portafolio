@@ -100,8 +100,6 @@ padding: 5px;
     color: #fff;
 }
 
-
-
 .contenedor .form .form-submit{
     width: 100%;
     outline: none;
@@ -124,7 +122,16 @@ padding: 5px;
     text-align: left;
 }
 
+.texto-reserva{
+    background: rgb(26, 25, 25);
+    padding: 4%;
+    margin-bottom: 3%;
+}
 
+.texto-reserva p{
+    text-align: center;
+    font-family: sans-serif;
+}
 
 
 
