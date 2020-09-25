@@ -1,0 +1,201 @@
+
+
+center {
+    color: black ;
+    background-color: 94cde7;
+    padding: 65px;
+    font-size: 20px;
+    border-block-start: 2px solid #02abfa;
+}
+.box
+{
+    
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    padding: 40px;
+    background: rgb(243, 72, 4);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+.box h2
+{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.box .inputBox input 
+{
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid; 
+    outline: none;
+    background: transparent;
+}
+.box .inputBox label
+{
+    
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+
+input[type="submit"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #272727;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+
+input[type="reset"]
+{
+    background: transparent;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #272727;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 5px; 
+}
+/*-------------------------------------------------------*/
+
+/*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}*/
+a{
+    text-decoration: none;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #272727;
+    padding: 20px 0px; 
+}
+
+.footer-icons{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.footer-icons ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.footer-icons ul li{
+    display: inline-block; 
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    border-radius: 100%;
+    background: #02abfa;
+}
+.footer-icons ul li a{
+    color: rgb(253, 249, 4); 
+    font-size: 25px;
+    display: block;
+}
+.footer-icons ul li a i{
+    line-height: 50px;
+}
+.footer-icons ul li:hover{
+    background: rgba(241, 11, 211, 0.61);  
+}
+
+
+
+.footermenu{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+}
+.footermenu ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center; 
+}
+.footermenu ul li{
+    display: inline-block;
+    margin: 5px 20px; 
+}
+.footermenu ul li a{
+    font-family: arial;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase; 
+}
+.footermenu ul li a:hover{
+    color: rgb(253, 249, 4); 
+}
+
+
+.footermenudos{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 15px;
+}
+.footermenudos ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center; 
+}
+.footermenudos ul li{
+    display: inline-block;
+    margin: 5px 20px; 
+}
+.footermenudos ul li a{
+    font-family: arial;
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+.footermenudos ul li a:hover{
+    color: rgb(253, 249, 4); 
+}
+
+
+.footerbajo{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: #02abfa;
+    padding: 5px;    
+}
+.footerbajo p{
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    font-weight: 3x00;
+    letter-spacing: 1px; 
+}
+.footerbajo p a{
+    color: #fff;
+}
+.footerbajo p a:hover{
+    color: rgb(253, 249, 4); 
+}
