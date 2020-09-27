@@ -28,3 +28,6 @@ def reserva(request):
 
 def contacto(request):
     return render (request, 'contacto.html')
+
+def administrador(request):
+    return render (request, 'administrador.html')
