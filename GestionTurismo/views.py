@@ -31,3 +31,13 @@ def contacto(request):
 
 def administrador(request):
     return render (request, 'administrador.html')
+
+def funcionario(request):
+    return render (request, 'funcionario.html')
+
+def perfil_funcionario(request):
+    return render (request, 'perfil_funcionario.html')
+    
+def crear_listado(request):
+    return render (request, 'crear_listado.html')
+    
