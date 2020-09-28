@@ -40,4 +40,25 @@ def perfil_funcionario(request):
     
 def crear_listado(request):
     return render (request, 'crear_listado.html')
+
+def mantener_cliente(request):
+    return render (request, 'mantener_cliente.html')
+
+
+
+
+def mantener_departamento(request):
+    return render (request, 'mantener_departamento.html')
+
+def pagos_adm(request):
+    return render (request, 'pagos_adm.html')
+
+def mantener_servicios(request):
+    return render (request, 'mantener_servicios.html')
     
+def generar_estadistica(request):
+    return render (request, 'generar_estadistica.html')
+
+def generar_informe(request):
+    return render (request, 'generar_informe.html')
+     

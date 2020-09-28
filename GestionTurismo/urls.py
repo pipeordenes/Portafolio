@@ -15,7 +15,12 @@ urlpatterns = [
     path('funcionario', views.funcionario , name='funcionario'),
     path('perfil_funcionario', views.perfil_funcionario , name='perfil_funcionario'),
     path('crear_listado', views.crear_listado , name='crear_listado'), 
-
+    path('mantener_cliente', views.mantener_cliente , name='mantener_cliente'), 
+    path('mantener_departamento', views.mantener_departamento , name='mantener_departamento'),
+    path('pagos_adm', views.pagos_adm , name='pagos_adm'),
+    path('mantener_servicios', views.mantener_servicios , name='mantener_servicios'),
+    path('generar_estadistica', views.generar_estadistica , name='generar_estadistica'), 
+    path('generar_informe', views.generar_informe , name='generar_informe'), 
 ]
 
 urlpatterns += [
