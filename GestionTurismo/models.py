@@ -4,7 +4,7 @@ class Clientes(models.Model):
 
     Nombre=models.CharField(max_length=30)
     Apellidos=models.CharField(max_length=30)
-    Edad= models.IntegerField()
+    Edad= models.IntegerField(null=True)
     Nacionalidad=models.CharField(max_length=30)
     Rut=models.CharField(max_length=13)
     Email= models.EmailField(blank=True, null=True)
@@ -16,42 +16,41 @@ class Clientes(models.Model):
 class Departamento(models.Model):
 
     Nombre_Departamento = models.CharField(max_length=30)
-    Numero_propiedad = models.IntegerField()
-    Descripcion= models.CharField(max_length=200)
-    Direccion= models.CharField(max_length=200)
-    habitaciones = models.IntegerField()
-    Baños = models.IntegerField()    
+    Numero_propiedad = models.IntegerField(null=True)
+    Descripcion= models.CharField(max_length=200, default="")
+    Direccion= models.CharField(max_length=200, default="")
+    habitaciones = models.IntegerField(null=True)
+    Baños = models.IntegerField(null=True)    
     Calefaccion = models.CharField(max_length=2)
     Internet = models.CharField(max_length=2)
-    Internet = models.CharField(max_length=2)
-    Amobla = models.CharField(max_length=2)
+    Amoblado = models.CharField(max_length=2)
     Televición = models.CharField(max_length=2)
     Imagen_Recinto = models.ImageField()
     Imagen_Entorno = models.ImageField()
     Valor_Diario = models.IntegerField()
     Disponible = models.CharField(max_length=2)
-    Check_in = models.CharField(max_length=200)
-    Check_out= models.CharField(max_length=200)
+    Check_in = models.CharField(max_length=200, default="")
+    Check_out= models.CharField(max_length=200, default="")
 
     def __str__ (self):
         return self.Nombre_Departamento 
 
 class Reserva(models.Model):
-    Fecha_Reserva_Inicio = models.DateField() 
-    Fecha_Reserva_Termino = models.DateField() 
-    Estado = models.CharField(max_length=100)
+    Fecha_Reserva_Inicio = models.DateField(null=True, default="") 
+    Fecha_Reserva_Termino = models.DateField(null=True, default="") 
+    Estado_Reserva = models.CharField(max_length=100, default="")
 
     def __str__ (self):
         return self.Fecha_Reserva_Inicio
 
 class Transporte(models.Model):
 
-    Fecha = models.DateField()
-    Recogida = models.CharField(max_length=200)
-    Destino = models.CharField(max_length=200)
-    Descripcion= models.CharField(max_length=40)
-    Tipo_Vehiculo = models.CharField(max_length=200)
-    Costo= models.IntegerField()
+    Trans_Fecha = models.DateField(null=True, default="")
+    Trans_Recogida = models.CharField(max_length=200, default="")
+    Trans_Destino = models.CharField(max_length=200, default="")
+    Trans_Descripcion= models.CharField(max_length=40, default="")
+    Tipo_Vehiculo = models.CharField(max_length=200, default="")
+    Trans_Costo= models.IntegerField(null=True)
 
     def __str__ (self):
      return self.Descripcion
@@ -69,19 +68,16 @@ class Funcionario(models.Model):
         return self.Nombre
 
 class ServicioExtra(models.Model):
-
-    Descripcion_Servicio=models.CharField(max_length=200)
-    Tipo=models.CharField(max_length=30)
-    Valor=models.IntegerField()
+    Descripcion_Servicio=models.CharField(max_length=200, default="")
 
     def __str__ (self):
-        return self.Tipo
+        return self.Descripcion_Servicio
 
 class Turismo(models.Model):
 
-    Descripcion_Servicio=models.CharField(max_length=200)
-    Fecha=models.DateField()
-    Valor=models.IntegerField()
+    Tur_Descripcion_Servicio=models.CharField(max_length=200, default="")
+    Tur_Fecha=models.DateField(null=True, default="")
+    Tur_Valor=models.IntegerField(null=True)
 
     def __str__ (self):
-        return self.Valor
+        return self.Tur_Valor
