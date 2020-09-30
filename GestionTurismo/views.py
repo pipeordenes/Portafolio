@@ -1,6 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views import generic
+from django.db import connection
+from .models import Cliente
+from .forms import ClienteForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+
 
 def index(request):
     return render(request, 'index.html', context={},)
@@ -13,9 +18,6 @@ def recuperarcontraseña(request):
 
 def registro(request):
     return render(request, 'registro.html', {})
-
-def cliente(request):
-    return render(request, 'cliente.html', {})
 
 def perfil(request):
     return render(request, 'perfil.html', {})
@@ -44,9 +46,6 @@ def crear_listado(request):
 def mantener_cliente(request):
     return render (request, 'mantener_cliente.html')
 
-
-
-
 def mantener_departamento(request):
     return render (request, 'mantener_departamento.html')
 
@@ -61,4 +60,26 @@ def generar_estadistica(request):
 
 def generar_informe(request):
     return render (request, 'generar_informe.html')
-     
+
+def resultado(request):
+    return render (request, 'resultado.html')
+
+def cliente(request):
+    return render(request, 'cliente.html', {})
+
+def registro(request):
+    form = ClienteForm()
+    if request.method == "POST":
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            instancia = form.save(commit=False)
+            instancia.save()
+            return redirect('/resultado.html')
+    return render(request, "registro.html", {'form': form})
+
+class ClienteListView(generic.ListView):
+    model = Cliente
+    paginate_by = 10
+
+class ClienteDetailView(generic.DetailView):
+    model = Cliente

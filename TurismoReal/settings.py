@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'None'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521/xepdb1',
-        'USER': 'turismoreal1',
+        'USER': 'turismoreal2',
         'PASSWORD': 'oracle',
         'TEST':{
             'USER': 'default_test',
