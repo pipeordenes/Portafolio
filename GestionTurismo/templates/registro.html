@@ -12,7 +12,7 @@
                 </h3>
             </div>
             <div class="panel-body">
-              <form accept-charset="UTF-8" role="form" method="POST">
+              <form method="POST" accept-charset="UTF-8" role="form" >
                 {% csrf_token %}
                 <fieldset>
                   <div class="form-group">
@@ -78,12 +78,5 @@
           </div>
         </div>
       </div>
-      <ul>
-        {% for Cliente in Cliente %}
-        <li>
-          {{ cliente.Nombre }}, {{ cliente.Apellidos }} 
-          </li>
-        {% endfor %}
-      </ul>
       {% endblock %}
       

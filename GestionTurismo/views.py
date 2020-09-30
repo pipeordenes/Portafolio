@@ -4,7 +4,7 @@ from django.views import generic
 from django.db import connection
 from .models import Cliente
 from .forms import ClienteForm
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import redirect
 
 
 def index(request):
@@ -74,12 +74,5 @@ def registro(request):
         if form.is_valid():
             instancia = form.save(commit=False)
             instancia.save()
-            return redirect('/resultado.html')
+            return redirect('/resultado')
     return render(request, "registro.html", {'form': form})
-
-class ClienteListView(generic.ListView):
-    model = Cliente
-    paginate_by = 10
-
-class ClienteDetailView(generic.DetailView):
-    model = Cliente
