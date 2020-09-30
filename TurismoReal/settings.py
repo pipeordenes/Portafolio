@@ -27,8 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
+SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'None'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'TurismoReal.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': '127.0.0.1:1521/xepdb1',
+        'USER': 'turismoreal2',
+        'PASSWORD': 'oracle',
+        'TEST':{
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp'
+        }
     }
 }
 
@@ -104,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
@@ -119,3 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'login'
